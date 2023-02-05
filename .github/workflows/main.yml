@@ -23,7 +23,7 @@ jobs:
 
           
     - name: abc
-      uses: hkusu/status-create-action@v2
+      uses: hkusu/status-create-action@v1
       with:
           sha: ${{ github.sha }}
           state: pending # specify 'error', 'failure', 'pending', or 'success'
