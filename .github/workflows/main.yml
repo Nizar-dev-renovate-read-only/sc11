@@ -21,7 +21,7 @@ jobs:
         # ...
         
     - name: Report status to Github
-       npm install @octokit/rest
+       npm install @octokit/core
       uses: actions/github-script@v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
