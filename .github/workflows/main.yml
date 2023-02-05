@@ -20,30 +20,7 @@ jobs:
         # Run your tests here
         # ...
         
-    - name: Report status to Github
-       npm install @octokit/core
-      uses: actions/github-script@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        script: |
-          const statusContext = 'continuous-integration/your-context';
-          const state = 'success';
-          const description = 'Your tests passed';
-          const target_url = 'https://example.com/status';
-          
-          const octokit = require('@octokit/core');
-          const client = new octokit({ auth: `token ${process.env.GITHUB_TOKEN}` });
-          
-          client.repos.createCommitStatus({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            sha: context.sha,
-            state: state,
-            description: description,
-            target_url: target_url,
-            context: statusContext
-          }):
+
           
     - name: abc
       uses: hkusu/status-create-action@v1
