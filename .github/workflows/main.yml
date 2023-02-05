@@ -32,7 +32,7 @@ jobs:
           const description = 'Your tests passed';
           const target_url = 'https://example.com/status';
           
-          const octokit = require('@octokit/rest');
+          const octokit = require('@octokit/core');
           const client = new octokit({ auth: `token ${process.env.GITHUB_TOKEN}` });
           
           client.repos.createCommitStatus({
