@@ -1,6 +1,6 @@
-name: Test
 
 const octokit = require('@octokit/rest');
+name: Test
 
 on: 
   pull_request:
