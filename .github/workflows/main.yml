@@ -19,3 +19,11 @@ jobs:
         echo "Running tests"
         # Run your tests here
         # ...
+        
+    - name: Report status to Github
+      uses: actions/create-status@v1
+      with:
+        context: continuous-integration/your-context
+        state: success
+        description: Your tests passed
+        target_url: https://example.com/status
